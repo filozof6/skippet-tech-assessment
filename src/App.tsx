@@ -167,42 +167,8 @@ export function OperationBuilder(props: {
   </span>
 }
 
-const testOp: Operation = {
-  type: OperationEnum.AND,
-  value: undefined,
-  children: [
-    {
-      type: OperationEnum.CONSTANT,
-      value: false,
-      children: []
-    },
-    {
-      type: OperationEnum.OR,
-      value: false,
-      children: [
-        {
-          type: OperationEnum.CONSTANT,
-          value: true,
-          children: []
-        },
-        {
-          type: OperationEnum.NOT,
-          value: false,
-          children: [
-            {
-              type: OperationEnum.ARGUMENT,
-              value: true,
-              children: []
-            }
-          ]
-        }
-      ]
-    }
-  ]
-};
-
 export default function App() {
-  const [op, setOp] = useState<Operation>(testOp/*OPERATION_INIT_OBJECT*/);
+  const [op, setOp] = useState<Operation>(OPERATION_INIT_OBJECT);
   const {args} = useContext(ArgsContext);
   const [result, setResult] = useState<boolean | string>('undefined');
 
