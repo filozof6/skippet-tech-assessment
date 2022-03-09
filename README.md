@@ -9,8 +9,9 @@ a system for defining logical operations
 
 Use this code in `App.tsx`:
 
-```javascript
+```typescript
 import React from "react"
+
 type Args = { [argname: string]: boolean }
 type Operation = any /* ...todo:
 a system for defining logical operations 
@@ -26,8 +27,8 @@ function evaluateOperation(operation: Operation, args: Args): boolean {
 }
 
 function OperationBuilder(props: {
-  value: Operation,
-  onChange: (value: Operation) => void,
+  value: Operation
+  onChange: (value: Operation) => void
 }): JSX.Element {
   /* ...todo: an ugly gui for creating operations */
 }
