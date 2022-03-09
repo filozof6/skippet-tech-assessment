@@ -10,6 +10,16 @@ a system for defining logical operations
 Use this code in `App.tsx`:
 
 ```javascript
+import React from "react"
+type Args = { [argname: string]: boolean }
+type Operation = any /* ...todo:
+a system for defining logical operations 
+(not, and, or... more if you want) that can be passed:
+ - selected args by name: (X and Y)
+ - constant values not dependent on args: (true and X)
+ - other operations: ((X and Y) or Z) 
+ */
+
 function evaluateOperation(operation: Operation, args: Args): boolean {
   /* ...todo: implement an evaluator for your operations, 
   given some args */
